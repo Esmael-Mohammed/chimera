@@ -1,0 +1,5 @@
+reviews:
+  review_status:
+    spec_alignment: true
+    security_vulnerabilities: true
+    test_coverage: true

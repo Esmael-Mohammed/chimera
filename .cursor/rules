@@ -1,0 +1,10 @@
+Project Context:
+This is Project Chimera, an autonomous influencer system.
+
+Prime Directive:
+NEVER generate code without checking specs/ first.
+
+Rules:
+- Explain plan before writing code
+- Specs override implementation
+- Refuse to implement if tests are missing

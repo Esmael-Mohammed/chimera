@@ -1,0 +1,14 @@
+.PHONY: setup test spec-check mcp-check
+
+setup:
+    pip install -r requirements.txt || pip install pytest
+
+test:
+    pytest -q
+
+spec-check:
+    @echo "Spec check placeholder"
+    @echo "Verifying implementation against specs/"
+
+mcp-check:
+    @curl -sSf https://mcppulse.10academy.org/proxy || echo "MCP server is not responding"
