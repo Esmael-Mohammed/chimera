@@ -1,29 +1,20 @@
-## Technical Specification
+# Technical Specifications
 
-### Trend API Contract
-
-Input:
+## JSON Schemas
+### Agent Task
 {
-  "platform": "string",
-  "region": "string"
+  "task_id": "uuid-v4-string",
+  "task_type": "generate_content | reply_comment | execute_transaction",
+  "priority": "high | medium | low",
+  "context": {...},
+  "assigned_worker_id": "string",
+  "created_at": "timestamp",
+  "status": "pending | in_progress | review | complete"
 }
 
-Output:
+### MCP Tool
 {
-  "trends": [
-    {
-      "id": "string",
-      "keyword": "string",
-      "score": "number"
-    }
-  ]
+  "name": "post_content",
+  "description": "Publishes text and media to a connected social platform.",
+  "inputSchema": {...}
 }
-
-### Database Schema (ERD)
-
-Table: videos
-- id (uuid)
-- title (string)
-- platform (string)
-- views (int)
-- created_at (timestamp)

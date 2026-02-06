@@ -1,10 +1,16 @@
-## Project Chimera — Meta Spec
+# Project Chimera - Autonomous Influencer Network
+## Vision
+Build a scalable swarm of autonomous AI influencers with economic and creative agency.
 
-Vision:
-Build a governed, autonomous AI influencer system capable of trend discovery,
-content generation, publishing, and monetization.
+## Constraints
+- All external interactions via MCP.
+- Strict HITL governance for low-confidence or sensitive tasks.
+- Multi-tenant, cloud-native architecture.
+- Planner-Worker-Judge fast-render swarm pattern.
 
-Constraints:
-- Specs are the single source of truth
-- No code may be written without spec alignment
-- All agent behavior must be testable
+## Architecture Summary
+- Hub-and-Spoke: Central Orchestrator + agent swarms
+- MCP for all Resources/Tools/Prompts
+- Redis queues: task_queue, review_queue
+- PostgreSQL for transactional data, Weaviate for long-term memory
+- Coinbase AgentKit for financial autonomy
